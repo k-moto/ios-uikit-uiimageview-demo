@@ -19,6 +19,14 @@ UIImage
 |---|---|---|
 |draw(in:) | 指定した範囲内に画像全体を描画する <br> 必要に応じてサイズを変更しフィットさせる | image.draw(in: CGRect(x: 0, y: 0, width: 80, height: 80)) |
 
+## 主要プロパティ
+
+|メソッド名|説明|サンプル|
+|---|---|---|
+| animationImages | アニメーションに使用するUIImageオブジェクトの配列を設定する | UIImageView.animationImages =<br> [UIImage(named: "image1")!, UIImage(named: "image2")! ] |
+| animationDuration | アニメーションの再生間隔を設定する(秒単位) | ImageView.animationDuration = 0.5 |
+| animationRepeatCount | アニメーションの再生回数を設定する | ImageView.animationRepeatCount = 5 |
+
 ## フレームワーク
 UIKit.framework
 
