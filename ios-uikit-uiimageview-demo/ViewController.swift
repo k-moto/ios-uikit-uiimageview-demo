@@ -9,19 +9,30 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet private weak var imageView: UIImageView!
     @IBOutlet private weak var subView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupSubView()
-        
+        //        setupSubView()
+        setupAnimation()
+        imageView.startAnimating()
         /*
          UIViewContentModeのデフォルト値
          　↓
          scaleToFill：アスペクト比を変更してviewのサイズにフィットさせる
          */
+    }
+    
+    private func setupAnimation(){
+        
+        let images = [UIImage(named: "creatersnest")!,UIImage(named: "creatersnest2")!,UIImage(named: "creatersnest3")!,UIImage(named: "creatersnest4")!]
+        imageView.animationImages = images
+        // 0.5秒間隔
+        imageView.animationDuration = 0.5
+        // 5回繰り返し
+        imageView.animationRepeatCount = 5
     }
     
     private func setupSubView() {
@@ -54,7 +65,7 @@ class ViewController: UIViewController {
     }
     
     /*
-     configureScaleAspectFill()を実行 または 
+     configureScaleAspectFill()を実行 または
      StoryboardでimageViewのContentModeをAspectFill にしてから
      下記メソッドを実行すること
      */
