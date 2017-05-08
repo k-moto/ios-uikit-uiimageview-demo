@@ -18,6 +18,8 @@ UIImage
 |メソッド名|説明|サンプル|
 |---|---|---|
 |draw(in:) | 指定した範囲内に画像全体を描画する <br> 必要に応じてサイズを変更しフィットさせる | image.draw(in: CGRect(x: 0, y: 0, width: 80, height: 80)) |
+| startAnimating() | アニメーションを開始する | imageView.startAnimating() |
+| stopAnimating() | アニメーションを停止する<br>animationRepeatCountの設定をしている場合、当メソッドを呼ばなくても止まる | imageView.stopAnimating() |
 
 ## 主要プロパティ
 
